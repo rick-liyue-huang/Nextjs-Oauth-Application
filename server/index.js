@@ -15,6 +15,16 @@ app.prepare()
   const server = new Koa();
   const router = new Router();
 
+  router.get('/a/:id', async (ctx) => {
+    const id = ctx.params.id;
+    console.log('id----', id);
+    await handle(ctx.req, ctx.res, {
+      pathname: '/a',
+      query: {id}
+    })
+    ctx.respond = false;
+  })
+
   server.use(router.routes());
 
   // middlewares
