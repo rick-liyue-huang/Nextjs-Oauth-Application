@@ -119,3 +119,8 @@
     flex-direction: column;
   }
 }
+
+.myclass {
+  font-size: 30px;
+  color: #0070f3;
+}
